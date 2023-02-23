@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5f0080"
+        tools:ignore="MissingConstraints" />
+    <ImageButton
+        android:id="@+id/cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cart_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="18dp"
+        android:background="#00ffffff"
+        />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/place_icon"
+        android:background="#00ffffff"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/cart"
+        android:layout_marginRight="12dp"
+        />
+
+    <ImageView
+        android:layout_width="77dp"
+        android:layout_height="46dp"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="18dp"/>
+
+    <LinearLayout
+        android:id="@+id/toolbar_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_bg_outline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_goneMarginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="마켓컬리"
+            android:textColor="#5C3177"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:paddingTop="5dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="5dp"
+            android:textStyle="bold"
+            android:background="@drawable/button_bg_on"
+            android:paddingLeft="15dp" android:paddingRight="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="뷰티컬리"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:paddingStart="15dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/white"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp" />
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tabIndicatorColor="#510F72"
+        app:tabIndicatorHeight="3dp"
+        app:tabSelectedTextColor="#510F72"
+        app:tabTextColor="#909090"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="54dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="컬러추천" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="신상품" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="베스트" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일뜰쇼핑" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="특가/혜택" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="3dp"
+            >
+
+            <!--<androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager_ad"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+                -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="270dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ad1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="이 상품 어때요?"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                >
+                <GridLayout
+                    android:layout_marginLeft="5dp"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:rowCount="3"
+                    android:columnCount="6"
+
+                    >
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="170dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/product1" />
+                    <TextView
+                        android:text="아시안 치킨 샐러드\n 275g"
+                        />
+                    <TextView
+                        android:text="6,900원"
+                        />
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="170dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/product2" />
+                    <TextView
+                        android:text="[무교동유정낙지] 낙지젓갈\n150g(냉장)"
+                        />
+                    <TextView
+                        android:text="6,900원"
+                        />
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="170dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/product3" />
+                    <TextView
+                        android:text="탄단지 다이어트 도시락\n 4종 세트"
+                        />
+                    <TextView
+                        android:text="19,600원"
+                        />
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="170dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/product4" />
+                    <TextView
+                        android:text="트러플 노르웨이 연어회 \n150g(냉장)"
+                        />
+                    <TextView
+                        android:text="12,900원"
+                        />
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="170dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/product4" />
+                    <TextView
+                        android:text="[맑은물에]참좋은 국산콩 \n 두부 2개입"
+                        />
+                    <TextView
+                        android:text="3,000원"
+                        />
+                </GridLayout>
+            </HorizontalScrollView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ad"
+                />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/recommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="놓치면  후회할 가격"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <HorizontalScrollView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                >
+                <GridLayout
+                    android:layout_marginLeft="5dp"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:rowCount="3"
+                    android:columnCount="6"
+
+                    >
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="170dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/product6" />
+                    <TextView
+                        android:text="저탄소 GAP 청도 반시 700g"
+                        />
+                    <TextView
+                        android:text="5,700원"
+                        />
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="170dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/product7" />
+                    <TextView
+                        android:text="[비움브레드] 비건 프로틴 베이글"
+                        />
+                    <TextView
+                        android:text="8,400원"
+                        />
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="170dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/product8" />
+                    <TextView
+                        android:text="[하루한컷]고기 듬뿍 마파두부"
+                        />
+                    <TextView
+                        android:text="9,500원"
+                        />
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="170dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/product9" />
+                    <TextView
+                        android:text="[티각태각]누룽지 튀김 4종"
+                        />
+                    <TextView
+                        android:text="6,500원"
+                        />
+                </GridLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/bottom_navigation"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@drawable/menu_selector_color"
+        tools:ignore="MissingConstraints"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemTextColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
